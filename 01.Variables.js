@@ -11,3 +11,7 @@ let second_number = 5;
 //accessing variables value
 console.log(first_number);
 console.log(second_number);
+
+//type checking
+console.log(typeof first_number);
+console.log(typeof second_number);
