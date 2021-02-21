@@ -27,3 +27,12 @@ let keep = [
 console.log(keep[2]());
 console.log(keep[3].a);
 console.log(keep[3]["b"]); // object_name.key or object_name['key']
+
+//sorting array
+let myNumbers = [3, 2, 20, 1];
+
+console.log("Before Sorting : ", myNumbers);
+myNumbers.sort((a, b) => a - b);
+console.log("After sorting : ", myNumbers);
+myNumbers.reverse();
+console.log("After reversing : ", myNumbers);
