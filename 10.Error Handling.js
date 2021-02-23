@@ -1,5 +1,6 @@
 // try-catch block
 //Using variable before declaration is called Hoisting
+// variable declared with let/const keyword doesn't show hoisting
 let a = 5,
   b = 2;
 try {
