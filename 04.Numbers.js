@@ -23,3 +23,10 @@ console.log(parseFloat(5)); // converting into float
 //Number MAX_VALUE and MIN_VALUE
 console.log(Number.MAX_VALUE);
 console.log(Number.MIN_VALUE);
+
+//Adding Two binay string 
+let binary1 = '1011' // decimal : 11
+let binary2 = '1111'  // decimal : 15
+let decimalResult = parseInt(binary1,2)+parseInt(binary2,2)
+console.log('Decimal of 1011: ' + parseInt(binary1, 2));
+console.log(`Binary Result after addition : ${decimalResult.toString(2)}`)
