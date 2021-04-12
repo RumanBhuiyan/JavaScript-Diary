@@ -346,37 +346,6 @@
         console.log(reject)
     })
 ```
-```javascript
-   const fetch = require('node-fetch')
-
-   let info ;
-
-   async function getData (){
-     try{
-           const response = await fetch('https://jsonplaceholder.typicode.com/posts')
-           const data = await response.json()
-
-           info = data 
-
-           data.map(({id,title})=>{
-             console.log(`${id} : ${title}`)
-           })
-
-           console.log('end of getData()')
-
-       }catch (error){
-
-          console.log(error)
-
-       }finally{
-
-         console.log(info)
-       }
-   }
-
-   getData()
-```
-
 > ## Asynchronous Programming 
 ```javascript
       // firstly install the package:  npm install node-fetch
@@ -401,6 +370,41 @@
           console.log("Api Served")
       }
       first()
+```
+> ## Handling Promises more simply  using Async Await
+```javascript
+    // Javascript Promise 
+  // run online replt.it : https://replit.com/@rumanbhuiyanbhu/practisejavascriptjs#index.js
+
+  const fetch = require('node-fetch')
+
+  let info ;
+
+  async function getData (){
+    try{
+         console.log('\t\t\t Starting Try block... ')
+
+        const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+        const data = await response.json()
+        info = data 
+
+        console.log('\t\t\t Finished Try block ')
+
+      }catch (error){
+
+         console.log(error)
+
+      }finally{
+
+        info.map(({id,title})=>{
+          return console.log(`${id}: ${title}`)
+        })
+
+        console.log('\t\t\t Finished Finally block ')
+      }
+  }
+
+  getData()
 ```
 > ## Rest and Spread Operator 
 ```javascript
