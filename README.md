@@ -346,6 +346,37 @@
         console.log(reject)
     })
 ```
+```javascript
+   const fetch = require('node-fetch')
+
+   let info ;
+
+   async function getData (){
+     try{
+           const response = await fetch('https://jsonplaceholder.typicode.com/posts')
+           const data = await response.json()
+
+           info = data 
+
+           data.map(({id,title})=>{
+             console.log(`${id} : ${title}`)
+           })
+
+           console.log('end of getData()')
+
+       }catch (error){
+
+          console.log(error)
+
+       }finally{
+
+         console.log(info)
+       }
+   }
+
+   getData()
+```
+
 > ## Asynchronous Programming 
 ```javascript
       // firstly install the package:  npm install node-fetch
